@@ -1,7 +1,11 @@
 import csv
 
 def number_to_card_name(number_list):
-    csv_filename = 'CR_107_2.csv'
+    Chinese_flag = 1
+    if Chinese_flag == 1:
+        csv_filename = 'CR_107_zh.csv'
+    else:
+        csv_filename = 'CR_107_en.csv'
     CR_card_dict = csv.DictReader(open(csv_filename))
     card_name_list = []
     for select_number in number_list:
